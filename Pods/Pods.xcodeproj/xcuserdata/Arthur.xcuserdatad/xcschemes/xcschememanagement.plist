@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>PNChart.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>UICountingLabel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>008AB7CFA85365F037BBBCFAAC51C103</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4C36E0A7EF77399E44FED10496D7729C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8B1AC5EC58667EF08382F93421B90949</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DD60FE60E83399D43996DB558ACA2301</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DF6B62D79728EF0641BA03AAAE9C576B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
