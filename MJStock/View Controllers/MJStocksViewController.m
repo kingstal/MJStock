@@ -119,6 +119,13 @@
     [self.tableView reloadData];
 }
 
+#pragma mark - UITableViewDataDelegate
+
+- (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
 #pragma mark - MJAddStockViewControllerDelegate
 
 /**
