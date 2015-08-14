@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C3C2AABE-3C2D-404C-AE35-C553651FA197</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MJStock</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BEA532B577F758D9274DB8AF024E0D332E4FD181</key>
+		<string>https://github.com/kingstal/MJStock.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MJStock.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BEA532B577F758D9274DB8AF024E0D332E4FD181</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/kingstal/MJStock.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BEA532B577F758D9274DB8AF024E0D332E4FD181</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BEA532B577F758D9274DB8AF024E0D332E4FD181</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MJStock</string>
+		</dict>
+	</array>
+</dict>
+</plist>

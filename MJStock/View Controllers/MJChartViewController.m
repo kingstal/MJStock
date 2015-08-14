@@ -11,6 +11,8 @@
 #import "MJFetcher.h"
 #import "MBProgressHUD.h"
 
+#define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+
 @interface MJChartViewController () <MBProgressHUDDelegate>
 
 @end
@@ -38,7 +40,8 @@
     __weak __typeof(self) weakSelf = self;
     [[MJFetcher sharedFetcher] fetchStockTrendDataWithID:self.stock.ID
         success:^(MJFetcher* fetcher, id data) {
-            [weakSelf addChartWithDataArray:data];
+            NSArray* dataArray = [self dealWithData:data];
+            [weakSelf addChartWithDataArray:dataArray];
         }
         failure:^(MJFetcher* fetcher, NSError* error) {
             MBProgressHUD* hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
@@ -50,18 +53,36 @@
         }];
 }
 
+- (NSArray*)dealWithData:(NSArray*)dataArray
+{
+    NSMutableArray* result = [NSMutableArray new];
+    for (NSString* s in dataArray) {
+        NSNumber* yValue = [NSNumber numberWithFloat:[[s componentsSeparatedByString:@" "][1] floatValue]];
+        [result addObject:yValue];
+    }
+    return result;
+}
+
 - (void)addChartWithDataArray:(NSArray*)dataArray
 {
     //For Line Chart
     PNLineChart* lineChart
-        = [[PNLineChart alloc] initWithFrame:CGRectMake(0, 135.0, SCREEN_WIDTH, SCREEN_WIDTH * 2 / 3)];
+        = [[PNLineChart alloc] initWithFrame:CGRectMake(0, 70, SCREEN_WIDTH, SCREEN_HEIGHT - 70)];
+
+    NSInteger max = ceilf([[dataArray valueForKeyPath:@"@max.self"] floatValue]);
+    NSInteger min = floorf([[dataArray valueForKeyPath:@"@min.self"] floatValue]);
+
+    lineChart.yFixedValueMax = max;
+    lineChart.yFixedValueMin = min;
+    lineChart.yLabelColor = [UIColor colorWithRed:0.22f green:0.57f blue:0.89f alpha:1.0f];
+    lineChart.yLabelFormat = @"%1.02f";
+    lineChart.yLabelNum = 10; //具体指的是 Y 轴有几个间隔
 
     PNLineChartData* data01 = [PNLineChartData new];
     data01.color = PNFreshGreen;
     data01.itemCount = dataArray.count;
     data01.getData = ^(NSUInteger index) {
-        NSString* data = dataArray[index];
-        CGFloat yValue = [[data componentsSeparatedByString:@" "][1] floatValue];
+        CGFloat yValue = [dataArray[index] floatValue];
         return [PNLineChartDataItem dataItemWithY:yValue];
     };
     lineChart.chartData = @[ data01 ];
